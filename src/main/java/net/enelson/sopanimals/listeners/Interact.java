@@ -167,7 +167,7 @@ public class Interact implements Listener {
 				return;
 
 			String newName = item.getItemMeta().getDisplayName();
-			if (newName.toLowerCase().startsWith("В§oРїРµСЂРµРґР°С‚СЊ")) {
+			if (newName.toLowerCase().startsWith("§oпередать")) {
 				String[] split = newName.split(" ");
 				if (split.length != 2) {
 					player.sendMessage(Utils.color(SopAnimals.configMain.getString("messages.error.transfer.args")));
@@ -225,7 +225,7 @@ public class Interact implements Listener {
 //				return;
 //			}
 
-			if (newName.equalsIgnoreCase("РѕС‡РёСЃС‚РёС‚СЊ")) {
+			if (newName.equalsIgnoreCase("очистить")) {
 				animalMob.setCustomName("");
 				if (!player.getGameMode().equals(GameMode.CREATIVE))
 					item.setAmount(item.getAmount() - 1);

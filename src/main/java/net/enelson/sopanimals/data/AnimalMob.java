@@ -424,7 +424,7 @@ public class AnimalMob {
 		}
 		newName += this.getColoredSatiety() + "] ";
 		if (this.open)
-			newName += "[&dРћР”&f] ";
+			newName += "[&dОД&f] ";
 		newName += this.customName;
 		this.entity.setCustomName(Utils.color(newName));
 		this.entity.setCustomNameVisible(true);
