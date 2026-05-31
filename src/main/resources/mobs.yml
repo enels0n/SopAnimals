@@ -1,0 +1,1236 @@
+mobs:
+  llama:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 86400
+      fullAmount: 12
+      childFullAmount: 6
+    items:
+      tame:
+        - WHEAT
+      feed:
+        - WHEAT
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  traderllama:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 30.0
+    satiety-child: 30.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 10.0
+      female: 20.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 86400
+      fullAmount: 12
+      childFullAmount: 6
+    items:
+      tame:
+        - WHEAT
+      feed:
+        - WHEAT
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  cat:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 86400
+      childBeathBefore: 43200
+      fullAmount: 8
+      childFullAmount: 4
+    items:
+      tame:
+        - COD
+        - SALMON
+      feed:
+        - COD
+        - SALMON
+        - CHIKEN
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  cow:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: false
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 13
+      childFullAmount: 7
+    items:
+      tame:
+        - WHEAT
+      feed:
+        - WHEAT
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-6 %player% breed-animal-cow 1 10.08.2024 12:00"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  mushroomcow:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: false
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 13
+      childFullAmount: 7
+    items:
+      tame:
+        - WHEAT
+      feed:
+        - WHEAT
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  sheep:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: false
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 13
+      childFullAmount: 7
+    items:
+      tame:
+        - WHEAT
+      feed:
+        - WHEAT
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  wolf:
+    enable: true
+    null-damage-at-fail-tame: false
+    null-damage-at-fail-interact: false
+    satiety-before-tame: 30.0
+    satiety-child: 50.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 13
+      childFullAmount: 7
+    items:
+      tame:
+        - BONE
+      feed:
+        - BEEF
+        - MUTTON
+        - PORKCHOP
+        - RABBIT
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  horse:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 13
+      childFullAmount: 7
+    items:
+      tame:
+        - APPLE
+      feed:
+        - WHEAT
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  skeletonhorse:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 8
+      childFullAmount: 8
+    items:
+      tame:
+        - BONE
+      feed:
+        - BONE
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  fox:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 8
+      childFullAmount: 8
+    items:
+      tame:
+        - SWEET_BERRIES
+      feed:
+        - CHICKEN
+        - COOKED_CHICKEN
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  panda:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 432000
+      childBeathBefore: 43200
+      fullAmount: 30
+      childFullAmount: 8
+    items:
+      tame:
+        - BAMBOO
+      feed:
+        - BAMBOO
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  mule:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 14
+      childFullAmount: 9
+    items:
+      tame:
+        - APPLE
+      feed:
+        - WHEAT
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  rabbit:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 8
+      childFullAmount: 6
+    items:
+      tame:
+        - CARROT
+      feed:
+        - CARROT
+        - DANDELION
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  pig:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 70.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 18000
+        max: 21600
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 8
+      childFullAmount: 6
+    items:
+      tame:
+        - CARROT
+      feed:
+        - CARROT
+        - ROTTEN_FLESH
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  parrot:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 50.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 1
+        max: 1
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 16
+      childFullAmount: 14
+    items:
+      tame:
+        - WHEAT_SEEDS
+        - PUMPKIN_SEEDS
+        - MELON_SEEDS
+        - BEETROOT_SEEDS
+      feed:
+        - WHEAT_SEEDS
+        - PUMPKIN_SEEDS
+        - MELON_SEEDS
+        - BEETROOT_SEEDS
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  chicken:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 50.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 1
+        max: 1
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 16
+      childFullAmount: 14
+    items:
+      tame:
+        - WHEAT_SEEDS
+        - PUMPKIN_SEEDS
+        - MELON_SEEDS
+        - BEETROOT_SEEDS
+      feed:
+        - WHEAT_SEEDS
+        - PUMPKIN_SEEDS
+        - MELON_SEEDS
+        - BEETROOT_SEEDS
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  turtle:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 50.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 1
+        max: 1
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 16
+      childFullAmount: 14
+    items:
+      tame:
+        - SEAGRASS
+      feed:
+        - COD
+        - SALMON
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  bee:
+    enable: true
+    null-damage-at-fail-tame: false
+    null-damage-at-fail-interact: false
+    satiety-before-tame: 50.0
+    satiety-child: 50.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 18000
+          max: 27000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 1
+        max: 1
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 16
+      childFullAmount: 14
+    items:
+      tame:
+        - PINK_TULIP
+        - WHITE_TULIP
+        - ORANGE_TULIP
+        - RED_TULIP
+        - POPPY
+        - DANDELION
+        - AZURE_BLUET
+        - LILY_OF_THE_VALLEY
+        - CORNFLOWER
+        - ALLIUM
+        - BLUE_ORCHID
+        - OXEYE_DAISY
+        - ROSE_BUSH
+        - PEONY
+        - LILAC
+      feed:
+        - PINK_TULIP
+        - WHITE_TULIP
+        - ORANGE_TULIP
+        - RED_TULIP
+        - POPPY
+        - DANDELION
+        - AZURE_BLUET
+        - LILY_OF_THE_VALLEY
+        - CORNFLOWER
+        - ALLIUM
+        - BLUE_ORCHID
+        - OXEYE_DAISY
+        - ROSE_BUSH
+        - PEONY
+        - LILAC
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  sniffer:
+    enable: true
+    null-damage-at-fail-tame: true
+    null-damage-at-fail-interact: true
+    satiety-before-tame: 50.0
+    satiety-child: 50.0
+    satiety-before-growing-up: 0.0
+    chances:
+      tame: 20.0
+      female: 40.0
+    timings:
+      reproduction:
+        female:
+          min: 1800
+          max: 1800
+        male:
+          min: 9999999
+          max: 9999999
+      reproductionCooldown:
+        female:
+          min: 54000
+          max: 72000
+        male:
+          min: 300
+          max: 300
+      pregnantPeriod:
+        min: 1
+        max: 1
+      childPeriod:
+        min: 79200
+        max: 86400
+      lifeTime:
+        min: 1209600
+        max: 1468800
+      tameCooldown: 60
+    feed:
+      deathBefore: 172800
+      childBeathBefore: 43200
+      fullAmount: 16
+      childFullAmount: 14
+    items:
+      tame:
+        - TORCHFLOWER
+        - TORCHFLOWER_SEEDS
+        - BEETROOT
+      feed:
+        - TORCHFLOWER
+        - TORCHFLOWER_SEEDS
+        - BEETROOT
+    tameCommands:
+      - "atotalstats addstat %player% tame-animal-total 1"
+      - "atotalstats addstat %player% tame-animal-%animal% 1"
+      - "atotalstats addeventstat bp1-week-5 %player% tame-animal-total 1 03.08.2024 12:00"
+      - "atotalstats addeventstat bp1-daily %player% tame-animal-total 1"
+    breedingCommands:
+      - "atotalstats addstat %player% breed-animal-total 1"
+      - "atotalstats addstat %player% breed-animal-%animal% 1"
+    tamedKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% exp-10-15 1 true"
+      - "elitemobsextension spin %player% animal-%animal%-tamed 1 true"
+    bornKillCommands:
+      - "atotalstats addstat %player% kill-animal-total 1"
+      - "atotalstats addstat %player% kill-animal-%animal% 1"
+      - "elitemobsextension spin %player% animal-%animal%-born 1 true"
+  axolotl:
+    enable: false

@@ -1,0 +1,26 @@
+enabled-worlds:
+  - world
+disable-other-animals: true
+disable-child-animals: true
+min-level-for-interact: 1
+
+bypassed-mobs:
+  - WANDARING_TRADER
+  - AXOLOTL
+
+gender:
+  male: "M"
+  female: "F"
+
+messages:
+  reload: "&8[&3&lSopAnimals&8] &ahas been reloaded."
+  error:
+    transfer:
+      args: "&cНеверное количество аргументов."
+      no-player: "&cДанный игрок не существует или не в игре."
+      self: "&cНельзя передать самому себе."
+    access:
+      already: "&cНевозможно сменить статус на такой же."
+    min-level: "&cНедостаточный уровень для взаимодействия с животными"
+  success:
+    transfer: "&aЖивотное успешно передано во владение другого игрока."
