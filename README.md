@@ -8,7 +8,7 @@ SopAnimals is a Bukkit/Spigot plugin that expands animal taming and breeding wit
 - Ownership transfer
 - Pregnancy, child growth, and lifetime timers
 - Reward and automation commands from config
-- PlaceholderAPI-aware level checks
+- Optional PlaceholderAPI-aware level checks with vanilla level fallback
 - Shared text handling through SopLib
 
 ## Requirements
@@ -16,7 +16,7 @@ SopAnimals is a Bukkit/Spigot plugin that expands animal taming and breeding wit
 - Java 8+
 - Spigot/Paper 1.20.4
 - SopLib
-- PlaceholderAPI
+- PlaceholderAPI (optional)
 
 ## Commands
 
