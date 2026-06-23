@@ -22,4 +22,15 @@ public class Utils {
 	public static String color(String message) {
 		return SopAnimals.textUtils != null ? SopAnimals.textUtils.color(message) : message;
 	}
+
+	/** Форматирует количество секунд в строку вида "5 мин 30 сек" / "45 сек". */
+	public static String formatTime(long seconds) {
+		if (seconds < 0)
+			seconds = 0;
+		long minutes = seconds / 60;
+		long secs = seconds % 60;
+		if (minutes > 0)
+			return minutes + " мин " + secs + " сек";
+		return secs + " сек";
+	}
 }

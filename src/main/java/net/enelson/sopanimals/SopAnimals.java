@@ -132,12 +132,48 @@ public class SopAnimals extends org.bukkit.plugin.java.JavaPlugin {
 		mobParams.put("nullDamageAtFailInteract", configMobs.getBoolean(basePath + ".null-damage-at-fail-interact"));
 		mobParams.put("itemsTame", configMobs.getStringList(basePath + ".items.tame"));
 		mobParams.put("itemsFeed", configMobs.getStringList(basePath + ".items.feed"));
-		mobParams.put("tameCommands", configMobs.getStringList(basePath + ".tameCommands"));
-		mobParams.put("breedingCommands", configMobs.getStringList(basePath + ".breedingCommands"));
-		mobParams.put("tamedKillCommands", configMobs.getStringList(basePath + ".tamedKillCommands"));
-		mobParams.put("bornKillCommands", configMobs.getStringList(basePath + ".bornKillCommands"));
+		mobParams.put("drops", buildDrops(basePath + ".drops"));
+		mobParams.put("wildDrops", buildDrops(basePath + ".wild-drops"));
+		mobParams.put("expMin", configMobs.getInt(basePath + ".exp.min"));
+		mobParams.put("expMax", configMobs.getInt(basePath + ".exp.max"));
 		mobParams.put("doCooldown", configMobs.getLong(basePath + ".timings.doCooldown"));
 		return mobParams;
+	}
+
+	private static java.util.List<net.enelson.sopanimals.data.DropEntry> buildDrops(String listPath) {
+		java.util.List<net.enelson.sopanimals.data.DropEntry> drops = new ArrayList<net.enelson.sopanimals.data.DropEntry>();
+		for (java.util.Map<?, ?> map : configMobs.getMapList(listPath)) {
+			Object itemObj = map.get("item");
+			if (itemObj == null) {
+				continue;
+			}
+			org.bukkit.Material item = org.bukkit.Material.matchMaterial(String.valueOf(itemObj).toUpperCase());
+			if (item == null) {
+				Bukkit.getLogger().warning("[SopAnimals] Неизвестный предмет дропа: " + itemObj);
+				continue;
+			}
+			org.bukkit.Material cooked = null;
+			if (map.get("cooked") != null) {
+				cooked = org.bukkit.Material.matchMaterial(String.valueOf(map.get("cooked")).toUpperCase());
+			}
+			java.util.LinkedHashMap<Integer, Integer> weights = new java.util.LinkedHashMap<>();
+			Object weightsObj = map.get("weights");
+			if (weightsObj instanceof java.util.Map<?, ?>) {
+				for (java.util.Map.Entry<?, ?> entry : ((java.util.Map<?, ?>) weightsObj).entrySet()) {
+					int amount = entry.getKey() instanceof Number ? ((Number) entry.getKey()).intValue()
+							: Integer.parseInt(String.valueOf(entry.getKey()));
+					int weight = entry.getValue() instanceof Number ? ((Number) entry.getValue()).intValue() : 0;
+					if (weight > 0) {
+						weights.put(amount, weight);
+					}
+				}
+			}
+			if (weights.isEmpty()) {
+				weights.put(1, 100);
+			}
+			drops.add(new net.enelson.sopanimals.data.DropEntry(item, cooked, weights));
+		}
+		return drops;
 	}
 
 	private static double getLegacyDouble(String primaryPath, String fallbackPath) {

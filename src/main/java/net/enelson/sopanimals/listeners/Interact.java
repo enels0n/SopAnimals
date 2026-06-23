@@ -20,6 +20,8 @@ import org.bukkit.inventory.ItemStack;
 
 import net.enelson.sopanimals.SopAnimals;
 import net.enelson.sopanimals.data.AnimalMob;
+import net.enelson.sopanimals.event.AnimalFeedEvent;
+import net.enelson.sopanimals.event.AnimalTameEvent;
 import net.enelson.sopanimals.utils.Utils;
 
 public class Interact implements Listener {
@@ -86,20 +88,7 @@ public class Interact implements Listener {
 			}
 			
 			if (SopAnimals.am.tryTame(entity, player)) {
-				Location loc = entity.getLocation().clone().add(0.5, 0.5, 0.5);
-				@SuppressWarnings("unchecked")
-				List<String> commands = (List<String>) SopAnimals.params.get(entityType).get("tameCommands");
-				if (commands != null) {
-					for (String cmd : commands) {
-						cmd = cmd.replaceAll("%player%", player.getDisplayName())
-								.replaceAll("%animal%", entityType)
-								.replaceAll("%world%", loc.getWorld().getName())
-								.replaceAll("%x%", loc.getX() + "")
-								.replaceAll("%y%", loc.getY() + "")
-								.replaceAll("%z%", loc.getZ() + "");
-						Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd);
-					}
-				}
+				Bukkit.getPluginManager().callEvent(new AnimalTameEvent(player, entityType));
 			}
 			
 			if (!player.getGameMode().equals(GameMode.CREATIVE)) {
@@ -116,6 +105,7 @@ public class Interact implements Listener {
 		List<Object> list = (List<Object>) SopAnimals.params.get(entity.getType().toString().toLowerCase()).get("itemsFeed");
 		if (animalMob.getSatiety() < 100 && list.contains(item.getType().toString().toUpperCase())) {
 			animalMob.feedAnimal();
+			Bukkit.getPluginManager().callEvent(new AnimalFeedEvent(player, entity.getType().toString().toLowerCase()));
 			if (!player.getGameMode().equals(GameMode.CREATIVE)) {
 				item.setAmount(item.getAmount() - 1);
 			}

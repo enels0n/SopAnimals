@@ -23,6 +23,7 @@ import org.bukkit.metadata.FixedMetadataValue;
 import org.bukkit.plugin.Plugin;
 
 import net.enelson.sopanimals.SopAnimals;
+import net.enelson.sopanimals.event.AnimalDeathEvent;
 import net.enelson.sopanimals.utils.PregnantException;
 
 public class AnimalManager {
@@ -82,6 +83,8 @@ public class AnimalManager {
 					AnimalMob am = it.next();
 					am.setSatiety(am.getSatiety() - ((100 / ((((double) SopAnimals.params.get(am.getType()).get("feedDeathBefore")))))*((System.currentTimeMillis()/1000)-am.getLastHungerTime())));
 					if ((am.getSatiety() <= 0 || (am.getDieTime()<=System.currentTimeMillis()/1000 && !am.isChild())) && am.isLoad()) {
+						String cause = (am.getSatiety() <= 0) ? "HUNGER" : "OLD_AGE";
+						Bukkit.getPluginManager().callEvent(new AnimalDeathEvent(Bukkit.getPlayerExact(am.getOwner()), cause, am.getType()));
 						it.remove();
 						((Damageable) am.getEntity()).damage(((Damageable) am.getEntity()).getHealth() + 10);
 						continue;
@@ -144,21 +147,6 @@ public class AnimalManager {
 							if(am.getPregnantUntil()>System.currentTimeMillis()/1000)
 								continue;
 
-							Location loc = am.getEntity().getLocation().clone().add(0.5,0.5,0.5);
-							@SuppressWarnings("unchecked")
-							List<String> commands = (List<String>) SopAnimals.params.get(am.getType()).get("breedingCommands");
-							if(commands != null) {
-								for(String cmd : commands) {
-									cmd = cmd.replaceAll("%player%", am.getOwner())
-											.replaceAll("%animal%", am.getType())
-											.replaceAll("%world%", loc.getWorld().getName())
-											.replaceAll("%x%", loc.getX()+"")
-											.replaceAll("%y%", loc.getY()+"")
-											.replaceAll("%z%", loc.getZ()+"");
-									Bukkit.dispatchCommand(Bukkit.getConsoleSender(), cmd);
-								}
-							}
-							
 							if(!am.getEntity().getType().equals(EntityType.SNIFFER))
 								it.add(new AnimalMob(am.getEntity()));
 							

@@ -12,6 +12,7 @@ import org.bukkit.entity.Tameable;
 import org.bukkit.metadata.FixedMetadataValue;
 
 import net.enelson.sopanimals.SopAnimals;
+import net.enelson.sopanimals.event.AnimalBirthEvent;
 import net.enelson.sopanimals.utils.PregnantException;
 import net.enelson.sopanimals.utils.Utils;
 
@@ -144,6 +145,7 @@ public class AnimalMob {
 		} else
 			this.owner = SopAnimals.am.getAnimalMob(mother).getOwner();
 		this.rename();
+		Bukkit.getPluginManager().callEvent(new AnimalBirthEvent(Bukkit.getPlayerExact(this.owner), this.type));
 	}
 
 	public Entity getEntity() {
