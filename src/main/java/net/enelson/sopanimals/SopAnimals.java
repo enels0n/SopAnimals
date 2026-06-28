@@ -50,6 +50,7 @@ public class SopAnimals extends org.bukkit.plugin.java.JavaPlugin {
 		registerListeners();
 		getCommand("sopanimals").setExecutor(new MainCommand());
 		am = new AnimalManager(this);
+		new net.enelson.sopanimals.listeners.LureHandler().start(this);
 	}
 
 	public static void reloadPluginData() {
@@ -132,6 +133,7 @@ public class SopAnimals extends org.bukkit.plugin.java.JavaPlugin {
 		mobParams.put("nullDamageAtFailInteract", configMobs.getBoolean(basePath + ".null-damage-at-fail-interact"));
 		mobParams.put("itemsTame", configMobs.getStringList(basePath + ".items.tame"));
 		mobParams.put("itemsFeed", configMobs.getStringList(basePath + ".items.feed"));
+		mobParams.put("itemsLure", configMobs.getStringList(basePath + ".items.lure"));
 		mobParams.put("drops", buildDrops(basePath + ".drops"));
 		mobParams.put("wildDrops", buildDrops(basePath + ".wild-drops"));
 		mobParams.put("expMin", configMobs.getInt(basePath + ".exp.min"));

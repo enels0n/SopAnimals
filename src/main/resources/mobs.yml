@@ -44,6 +44,8 @@ mobs:
         - WHEAT
       feed:
         - WHEAT
+      lure:
+        - WHEAT
     drops:
       - item: LEATHER
         weights:
@@ -97,6 +99,8 @@ mobs:
       tame:
         - WHEAT
       feed:
+        - WHEAT
+      lure:
         - WHEAT
     drops:
       - item: LEATHER
@@ -155,6 +159,10 @@ mobs:
         - COD
         - SALMON
         - CHIKEN
+      lure:
+        - COD
+        - SALMON
+        - CHIKEN
     drops:
       - item: STRING
         weights:
@@ -209,6 +217,8 @@ mobs:
       tame:
         - WHEAT
       feed:
+        - WHEAT
+      lure:
         - WHEAT
     drops:
       - item: BEEF
@@ -277,6 +287,8 @@ mobs:
         - WHEAT
       feed:
         - WHEAT
+      lure:
+        - WHEAT
     drops:
       - item: BEEF
         cooked: COOKED_BEEF
@@ -344,6 +356,8 @@ mobs:
         - WHEAT
       feed:
         - WHEAT
+      lure:
+        - WHEAT
     drops:
       - item: MUTTON
         cooked: COOKED_MUTTON
@@ -410,6 +424,11 @@ mobs:
         - MUTTON
         - PORKCHOP
         - RABBIT
+      lure:
+        - BEEF
+        - MUTTON
+        - PORKCHOP
+        - RABBIT
     drops: []
     exp:
       min: 0
@@ -458,6 +477,8 @@ mobs:
       tame:
         - APPLE
       feed:
+        - WHEAT
+      lure:
         - WHEAT
     drops:
       - item: LEATHER
@@ -512,6 +533,8 @@ mobs:
       tame:
         - BONE
       feed:
+        - BONE
+      lure:
         - BONE
     drops:
       - item: BONE
@@ -568,6 +591,9 @@ mobs:
       feed:
         - CHICKEN
         - COOKED_CHICKEN
+      lure:
+        - CHICKEN
+        - COOKED_CHICKEN
     drops: []
     exp:
       min: 0
@@ -616,6 +642,8 @@ mobs:
       tame:
         - BAMBOO
       feed:
+        - BAMBOO
+      lure:
         - BAMBOO
     drops:
       - item: BAMBOO
@@ -668,6 +696,8 @@ mobs:
       tame:
         - APPLE
       feed:
+        - WHEAT
+      lure:
         - WHEAT
     drops:
       - item: LEATHER
@@ -722,6 +752,9 @@ mobs:
       tame:
         - CARROT
       feed:
+        - CARROT
+        - DANDELION
+      lure:
         - CARROT
         - DANDELION
     drops:
@@ -793,6 +826,9 @@ mobs:
       feed:
         - CARROT
         - ROTTEN_FLESH
+      lure:
+        - CARROT
+        - ROTTEN_FLESH
     drops:
       - item: PORKCHOP
         cooked: COOKED_PORKCHOP
@@ -860,6 +896,11 @@ mobs:
         - PUMPKIN_SEEDS
         - MELON_SEEDS
         - BEETROOT_SEEDS
+      lure:
+        - WHEAT_SEEDS
+        - PUMPKIN_SEEDS
+        - MELON_SEEDS
+        - BEETROOT_SEEDS
     drops:
       - item: FEATHER
         weights:
@@ -915,6 +956,11 @@ mobs:
         - MELON_SEEDS
         - BEETROOT_SEEDS
       feed:
+        - WHEAT_SEEDS
+        - PUMPKIN_SEEDS
+        - MELON_SEEDS
+        - BEETROOT_SEEDS
+      lure:
         - WHEAT_SEEDS
         - PUMPKIN_SEEDS
         - MELON_SEEDS
@@ -982,6 +1028,9 @@ mobs:
       tame:
         - SEAGRASS
       feed:
+        - COD
+        - SALMON
+      lure:
         - COD
         - SALMON
     drops:
@@ -1066,6 +1115,22 @@ mobs:
         - ROSE_BUSH
         - PEONY
         - LILAC
+      lure:
+        - PINK_TULIP
+        - WHITE_TULIP
+        - ORANGE_TULIP
+        - RED_TULIP
+        - POPPY
+        - DANDELION
+        - AZURE_BLUET
+        - LILY_OF_THE_VALLEY
+        - CORNFLOWER
+        - ALLIUM
+        - BLUE_ORCHID
+        - OXEYE_DAISY
+        - ROSE_BUSH
+        - PEONY
+        - LILAC
     drops: []
     exp:
       min: 0
@@ -1116,6 +1181,10 @@ mobs:
         - TORCHFLOWER_SEEDS
         - BEETROOT
       feed:
+        - TORCHFLOWER
+        - TORCHFLOWER_SEEDS
+        - BEETROOT
+      lure:
         - TORCHFLOWER
         - TORCHFLOWER_SEEDS
         - BEETROOT

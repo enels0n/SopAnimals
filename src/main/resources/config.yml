@@ -12,6 +12,14 @@ gender:
   male: "M"
   female: "F"
 
+# Настройки приманки (lure).
+# lure-range: в каком радиусе животные реагируют на приманку.
+# lure-speed: скорость передвижения к игроку (1.0 = нормальная).
+# lure-interval-ticks: как часто проверять (10 = каждые 0.5 сек).
+lure-range: 10.0
+lure-speed: 1.0
+lure-interval-ticks: 10
+
 messages:
   reload: "&8[&3&lSopAnimals&8] &aКонфиг перезагружен."
   error:
